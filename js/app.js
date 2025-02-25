@@ -24,7 +24,7 @@ const init = async () => {
                 </div>
             </li>
         `
-    })
+    }).join(' ')
 
 }
 init()
@@ -41,14 +41,14 @@ me.innerHTML = person.map((item)=>{
             <p>Descrição: ${description}</p>
             <section>${education.map(({university, degree, master})=>`<h4>Estudante na ${university} nos cursos de: </h4>
             <ul>
-            <li>Graduação: ${degree}</li>
-            <li>Mestrado: ${master}</li>
+                <li>Graduação: ${degree}</li>
+                <li>Mestrado: ${master}</li>
             </ul>
             `)}
             </section>
         </article>
 
     `
-})
+}).join(' ')
 
 window.addEventListener('load', init)
