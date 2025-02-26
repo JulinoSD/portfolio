@@ -67,18 +67,21 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .profile-header{
+    position: relative;
     width: 100vw;
     height: 30rem;
-    background: url('../images/neblina_aurja.jpg') 100% center no-repeat;
-    background-size: cover;
+    background: radial-gradient(#ff00ff30, #ff000020, #ff000010);
+    color: var(--clr-white);
 }
-.profile-header::after{
+.profile-header::before{
     content: "";
     position: absolute;
-    background: #ff0000;
     width: 100vw;
     height: 30rem;
-    z-index: 1;
+    top: 0;
+    z-index: -1;
+    background: url('../images/neblina_aurja.jpg') 100% center no-repeat;
+    background-size: cover;
 }
 .profile-menu{
     width: 100%;
@@ -114,6 +117,7 @@ body{
     background: none;
     text-transform: uppercase;
     padding: 0.8rem 0;
+    cursor: pointer;
 }
 .main-wraper{
     margin: auto;
