@@ -308,7 +308,49 @@ body{
 #contact-me > label + label{
     margin-top: 0.8rem;
 }
-#contact-me > input{
+#contact-me input{
     padding: 0.8rem;
-    background: pink;
+    background: none;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+    all: unset;
+    background-color: aliceblue;
+}
+#contact-me button{
+    background: none;
+    border: 2px solid var(--clr-grey-1);
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem 0;
+    gap: 2rem;
+}
+.footer .social-media{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    margin: auto;
+    place-content: center;
+}
+.footer .social-media a {
+    padding: 0.3rem 1rem;
+    width: 116px;
+    text-align: center;
+    color: var(--clr-white);
+}
+.footer .social-media > :nth-child(1){
+    background: #0a66c2;
+}
+.footer .social-media > :nth-child(2){
+    background: #000;
+}
+.footer .social-media > :nth-child(3){
+    background: #f06;
 }
