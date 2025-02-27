@@ -185,9 +185,9 @@ body{
     grid-template-columns: 1fr minmax(250px, 380px);
     column-gap: 1rem;
 }
-.main-content{
+/* .main-content{
     height: 100vh;
-}
+} */
 .sites{
     display: flex;
     flex-direction: column;

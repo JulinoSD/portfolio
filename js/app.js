@@ -3,26 +3,36 @@ import fetchSites from "./fetch.js";
 import dataFormat from "./utils.js";
 
 const siteList = document.querySelector('.sites')
-console.log(siteList)
 const init = async () => {
     const sites = await fetchSites()
-    siteList.innerHTML = sites.map((item)=>{
-        const {screenshot_url:image, name:site_name, url:site_url, updated_at:refresh, account_slug:owner, prerender:server, build_settings, admin_url} = item
+    siteList.innerHTML = sites.map((item) => {
+        const {
+            screenshot_url: image,
+            name: site_name, url: site_url,
+            updated_at: refresh,
+            account_slug: owner,
+            prerender: server,
+            build_settings,
+            admin_url,
+            published_deploy: deploy,
+        } = item
         console.log(item)
+        const linkSite = deploy.links.alias
         const provide = build_settings?.provider
-        const path = build_settings?.repo_path
-        return`
+        return `
             <li>
+            <a href="${linkSite}">
                 <figure>
-                    <img src="${image}" alt="${site_name}" />
+                    <img src="${image ? image : '../src/images/neblina_aurja.jpg'}" alt="${site_name}" />
                 </figure>
                 <div>
                     <h3>${site_name}</h3>
                     <a href="${build_settings.repo_url}">${provide}</a>
                     <p>propietário: ${owner}</p>
-                    <a href="${admin_url}">${server}</a>
+                    <a href="${admin_url}">${server ? server : 'Netlify'}</a>
                     <p>${dataFormat(refresh)}</p>
                 </div>
+            </a>
             </li>
         `
     }).join(' ')
@@ -30,8 +40,8 @@ const init = async () => {
 }
 init()
 const me = document.querySelector('.me')
-me.innerHTML = person.map((item)=>{
-    const {name, description, image, role, education} = item
+me.innerHTML = person.map((item) => {
+    const { name, description, image, role, education } = item
     return `
         <article class="info-card">
             <figure>
@@ -39,7 +49,8 @@ me.innerHTML = person.map((item)=>{
             </figure>
             <h4>${name}</h4>
             <h5>${role}</h5>
-            <section>${education.map(({university, degree, master})=>`<h5>${university}</h5>
+            <section>
+            ${education.map(({ university, degree, master }) => `<h5>${university}</h5>
             <ul>
             <li>${degree} & ${master}</li>
             </ul>
