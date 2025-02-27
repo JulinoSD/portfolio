@@ -8,6 +8,7 @@ const init = async () => {
     const sites = await fetchSites()
     siteList.innerHTML = sites.map((item)=>{
         const {screenshot_url:image, name:site_name, url:site_url, updated_at:refresh, account_slug:owner, prerender:server, build_settings, admin_url} = item
+        console.log(item)
         const provide = build_settings?.provider
         const path = build_settings?.repo_path
         return`
@@ -42,11 +43,10 @@ me.innerHTML = person.map((item)=>{
             <ul>
             <li>${degree} & ${master}</li>
             </ul>
-            `)}
+            `).join(' ')}
             </section>
             <p>Descrição: ${description}</p>
         </article>
-
     `
 }).join(' ')
 
