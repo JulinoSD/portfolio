@@ -175,7 +175,9 @@ body{
 .main-wraper{
     margin: auto;
     max-width: 1024px;
-
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 }
 .info-content{
     padding: 2rem 0;
@@ -185,7 +187,6 @@ body{
 }
 .main-content{
     height: 100vh;
-
 }
 .sites{
     display: flex;
@@ -272,4 +273,42 @@ body{
     -o-border-radius: 0.8rem;
     background: var(--clr-white);
     padding: 0.8rem;
+}
+#about, #contact{
+    padding: 2rem;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+    background: var(--clr-white);
+}
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+#about > :nth-child(1){
+    margin: 1rem 0;
+    text-align: center;
+}
+#contact-me{
+    width: 720px;
+    min-width: 345px;
+    display: flex;
+    flex-direction: column;
+}
+#contact-me > label{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#contact-me > label + label{
+    margin-top: 0.8rem;
+}
+#contact-me > input{
+    padding: 0.8rem;
+    background: pink;
 }

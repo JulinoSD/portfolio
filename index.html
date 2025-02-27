@@ -14,13 +14,17 @@
         <nav class="profile-menu">
             <h1 class="logo">Julino</h1>
             <ul>
-                <li>Sobre</li>
+                <li>
+                    <a href="#about">
+                        Sobre
+                    </a>
+                </li>
                 <li>contato</li>
             </ul>
         </nav>
         <section class="profile-call">
             <div class="profile-description">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam error ipsum aut vero expedita consequuntur porro magni voluptatibus tempora minima. Voluptates perspiciatis fugiat corporis aspernatur voluptatibus suscipit blanditiis, veniam consequuntur.</p>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam error ipsum aut vero expedita consequuntur porro magni voluptatibus tempora minima. Voluptates perspiciatis fugiat corporis aspernatur voluptatibus suscipit blanditiis, veniam consequuntur.</h2>
             </div>
             <div class="profile-call-btn">
                 <button type="button">email</button>
@@ -41,7 +45,26 @@
         </article>
         <article id="about">
             <h1>Função deste espaço</h1>
-            <p> Neste espaço você vai encontrar todas as minhas práticas com as linguagens de programação web como HTML5, CSS3, e Javascript, tudo desenvolvido do zero, acompanhado com um design legal e muito consumo de API e API REST e boas práticas de programação, vais encontrar também cada repositório (que for público) para replicar, melhorar, ou mesma dar sua opinião no meu projeto. Sou entusiásta quand se fala de programação, como Engenheiro Eletricista meu foco está em projetos de Angenharia Biomédica, portanto tenho trabalho as minhas habilidades para outras linguagens de programação, atualmente estudo C++ para processamento de imagens médicas e projetos de engenharia médica, porque ela me facilita a não perder muita memória e ter eficiência no processamento em tempo real, e também compartilho este conhecimento com a linguagem Python. Em breve alguns projetos irão figurar por aqui também.</p>
+            <p> 
+                Neste espaço você vai encontrar todas as minhas práticas com as linguagens de programação web como HTML5, CSS3, e Javascript, tudo desenvolvido do zero, acompanhado com um design legal e muito consumo de API e API REST e boas práticas de programação, vais encontrar também cada repositório (que for público) para replicar, melhorar, ou mesmo dar sua opinião no meu projeto. Sou entusiásta quando se fala de programação, como Engenheiro Eletricista meu foco está em projetos de Engenharia Biomédica, portanto tenho trabalhado as minhas habilidades para outras linguagens de programação, atualmente estudo C++ para processamento de imagens médicas e projetos de engenharia médica, porque ela me facilita a não perder muita memória e ter eficiência no processamento em tempo real, e também compartilho este conhecimento com a linguagem Python, a linguagem Rust é muito interessante para mim também, já estudei, porém ainda não tem o tanto de conteúdo que eu venha a precisar hoje para trabalhar no que estou querendo. A linguagem Julia é muito boa também, principalmente para simulação de flúidos. Em breve alguns projetos irão figurar por aqui também, seguind o mesmo padrão, interface gráfica bem trabalhada e o máximo de profissionalismo e boas práticas.
+            </p>
+        </article>
+        <article id="contact">
+            <h1>Me chame</h1>
+            <form action="" method="post" id="contact-me">
+                <label for="name">Nome
+                    <input type="text" name="name" id="name" placeholder="seu nome"/>
+                </label>
+                <label for="cel"> Telefone
+                    <input type="tel" name="tel" id="tel" placeholder="+55 (xx) 930xxooaa"/>
+                </label>
+                <label for="subject"> Assunto
+                    <input type="text" name="subject" id="subject" placeholder="Assunto"/>
+                </label>
+                <label for="hist"> Mensagem
+                    <textarea minlength="10" id="hist" name="hist" rows="4" required></textarea>
+                </label>
+            </form>
         </article>
     </main>
     <footer class="footer"> 
