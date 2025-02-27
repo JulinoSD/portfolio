@@ -21,15 +21,19 @@ const init = async () => {
         const provide = build_settings?.provider
         return `
             <li>
-            <a href="${linkSite}">
+            <a href="${linkSite}" target="blank">
                 <figure>
                     <img src="${image ? image : '../src/images/neblina_aurja.jpg'}" alt="${site_name}" />
                 </figure>
                 <div>
                     <h3>${site_name}</h3>
-                    <a href="${build_settings.repo_url}">${provide}</a>
+                    <a href="${build_settings.repo_url}" target="blank">
+                    ${provide}
+                    </a>
                     <p>propietário: ${owner}</p>
-                    <a href="${admin_url}">${server ? server : 'Netlify'}</a>
+                    <a href="${admin_url}" target="blank">
+                    ${server ? server : 'Netlify'}
+                    </a>
                     <p>${dataFormat(refresh)}</p>
                 </div>
             </a>
