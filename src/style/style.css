@@ -183,6 +183,12 @@ body{
     cursor: pointer;
     font-family: var(--font-btn);
 }
+.profile-call-btn > :nth-child(2):hover{
+    background: green;
+}
+.profile-call-btn > :nth-child(1):hover{
+    background: var(--clr-grey-2);
+}
 .main-wraper{
     margin: auto;
     max-width: 1024px;
