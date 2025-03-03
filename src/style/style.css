@@ -139,16 +139,6 @@ body{
     background: url('../images/neblina_aurja.jpg') 100% center no-repeat;
     background-size: cover;
 }
-/* @media(max-width:768px){
-    .profile-header{
-        display: flex;
-        flex-direction: column;
-        height: 35rem;
-    }
-    .profile-header::before{
-        height: 35rem;
-    }
-} */
 .profile-menu{
     width: 100%;
     display: inline-flex;
@@ -183,7 +173,7 @@ body{
     gap: 4rem;
     width: 100%;
 }
-.profile-call-btn > button{
+.profile-call-btn > a{
     width: 150px;
     border: 2px solid white;
     color: var(--clr-white);
@@ -192,8 +182,9 @@ body{
     padding: 0.8rem 0;
     cursor: pointer;
     font-family: var(--font-btn);
+    text-align: center;
 }
-.profile-call-btn > button:hover{
+.profile-call-btn > a:hover{
     border: none;
 }
 .profile-call-btn > :nth-child(1):hover{
@@ -383,4 +374,34 @@ body{
 }
 .footer .social-media > :nth-child(3){
     background: #f06;
+}
+@media(max-width:768px){
+    .profile-header{
+        display: flex;
+        flex-direction: column;
+        height: 35rem;
+    }
+    .profile-header::before{
+        height: 35rem;
+    }
+    .profile-menu{
+        padding: 2rem !important;
+    }
+    .profile-description > h2 {
+        padding: 1rem;
+    }
+}
+@media(max-width:345px){
+    .info-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .info-card{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5,1fr);
+    }
+    .info-card > figure {
+        grid-column: 3 / 3;
+    }
 }

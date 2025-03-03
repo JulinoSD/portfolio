@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style/style.css">
+    <style>
+        .info-card-teste{
+            background-color: #f00;
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+            width: 100%;
+            height: fit-content;
+            padding: 0.8rem;
+            column-gap: 0.5rem;
+        }
+        .info-card-teste > figure {
+            grid-row-start: 1;
+            grid-row-end: 5;
+            max-width: 180px;
+            display: grid;
+            place-content: center;
+        }
+        .info-card-teste > figure img {
+            width: 100%;
+        }
+        .info-card-teste p {
+            font: 500 12px Arial, sans-serif;
+        }
+    </style>
+    <title>grid</title>
+</head>
+<body>
+    <article class="info-card-teste">
+        <figure>
+            <img src="./src/images/foto_para_carteirinha.png" alt = "default" />
+        </figure>
+        <h4>Julino Dídimo</h4>
+        <h5>Desenvolvedor</h5>
+        <section>
+        <h5>Universidade de São Paulo - USP</h5>
+        <ul>
+        <li>Graduação & Mestrado</li>
+        </ul>
+        </section>
+        <p>Descrição: Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa doloremque, vitae saepe ipsum unde sapiente fugit deleniti magnam provident, laudantium ut velit temporibus earum voluptate cum dolorem amet porro debitis.</p>
+    </article>
+</body>
+<script type="module" src="./js/app.js"></script>
+</html>
