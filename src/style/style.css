@@ -256,6 +256,32 @@ body{
     text-align: center;
 
 }
+
+.info-card-teste>figure img {
+    width: 100%;
+}
+
+.info-card-teste p {
+    font: 500 16px Arial, sans-serif;
+}
+
+.introducing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.8rem;
+}
+
+.introducing> :nth-child(odd) {
+    margin-bottom: 14px;
+}
+
+.introducing>section {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
 .info-card > :nth-child(even){
     margin: 1rem 0 !important;
 
@@ -295,7 +321,7 @@ body{
     background: var(--clr-white);
     padding: 0.8rem;
 }
-#about, #contact{
+#about{
     padding: 2rem;
     border-radius: 0.8rem;
     -webkit-border-radius: 0.8rem;
@@ -304,47 +330,68 @@ body{
     -o-border-radius: 0.8rem;
     background: var(--clr-white);
 }
-#contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
 #about > :nth-child(1){
     margin: 1rem 0;
     text-align: center;
 }
+#contact {
+    display: flex;
+    flex-direction: column;
+    background: var(--clr-white);
+    padding: 2rem;
+    place-items: center;
+}
 #contact-me{
-    width: 720px;
-    min-width: 345px;
-    display: flex;
-    flex-direction: column;
-}
-#contact-me > label{
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
-#contact-me > label + label{
+.call{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+@media(max-width: 375px){
+    .call{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+.contact-info > div {
+    font-weight: 600;
+}
+.contact-info > div p{
+    text-transform: capitalize;
+}
+.social-media{
+    width: 100%;
     margin-top: 0.8rem;
 }
-#contact-me input{
-    padding: 0.8rem;
-    background: none;
-    border-radius: 0.3rem;
-    -webkit-border-radius: 0.3rem;
-    -moz-border-radius: 0.3rem;
-    -ms-border-radius: 0.3rem;
-    -o-border-radius: 0.3rem;
-    all: unset;
-    background-color: aliceblue;
+.social-media a {
+    padding: 0.3rem 1rem;
+    width: 116px;
+    text-align: center;
+    color: var(--clr-white);
 }
-#contact-me button{
-    background: none;
-    border: 2px solid var(--clr-grey-1);
-    padding: 0.5rem;
-    margin-top: 1rem;
+.social-media > :nth-child(1){
+    background: #0a66c2;
+}
+.social-media > :nth-child(2){
+    background: #000;
+}
+.social-media > :nth-child(3){
+    background: rgb(94, 29, 55);
+}
+#contact-me > label {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+}
+#contact-me > button {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.4rem;
 }
 .footer{
     display: flex;
@@ -352,28 +399,6 @@ body{
     align-items: center;
     margin: 4rem 0;
     gap: 2rem;
-}
-.footer .social-media{
-    display: flex;
-    gap: 2rem;
-    width: 100%;
-    margin: auto;
-    place-content: center;
-}
-.footer .social-media a {
-    padding: 0.3rem 1rem;
-    width: 116px;
-    text-align: center;
-    color: var(--clr-white);
-}
-.footer .social-media > :nth-child(1){
-    background: #0a66c2;
-}
-.footer .social-media > :nth-child(2){
-    background: #000;
-}
-.footer .social-media > :nth-child(3){
-    background: #f06;
 }
 @media(max-width:768px){
     .profile-header{
@@ -391,17 +416,13 @@ body{
         padding: 1rem;
     }
 }
-@media(max-width:345px){
+@media(max-width:375px){
     .info-content{
         display: flex;
         flex-direction: column-reverse;
+        gap: 1rem;
     }
-    .info-card{
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(5,1fr);
-    }
-    .info-card > figure {
-        grid-column: 3 / 3;
+    h3{
+        font-size: 16px;
     }
 }
