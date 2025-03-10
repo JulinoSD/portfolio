@@ -345,14 +345,6 @@ body{
     align-items: center;
     gap: 2rem;
 }
-@media(max-width: 380px){
-    .call{
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 2rem;
-    }
-}
 .contact-info > div {
     font-weight: 600;
 }
@@ -394,7 +386,7 @@ body{
     margin: 4rem 0;
     gap: 2rem;
 }
-@media(max-width:768px){
+@media(max-width:48em){
     .profile-header{
         display: flex;
         flex-direction: column;
@@ -410,7 +402,7 @@ body{
         padding: 1rem;
     }
 }
-@media(max-width:380px){
+@media(max-width:30em){
     .profile-call-btn{
         gap: 2.5rem;
     }
@@ -423,22 +415,21 @@ body{
     .profile-description > h2 {
         text-align: justify;
     }
-    .info-content{
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 1rem;
-    }
     h3{
         font-size: 16px;
     }
 }
-@media(max-width: 600px){
+@media(max-width: 30em), (orientation: landscape){
     .info-content {
         padding: 2rem 0;
-        display: grid;
-        grid-template-columns: 1fr minmax(250px, 380px);
         display: flex;
         flex-direction: column-reverse;
         row-gap: 1rem;
+    }
+    .call{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
     }
 }
