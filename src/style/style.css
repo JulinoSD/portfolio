@@ -42,6 +42,7 @@
     --max-width: 1170px;
     --fixed-width: 620px;
     --font-btn: 'Lato', sans-serif;
+    --headingfont: -apple-system, sans-serif;
 }
 *{
     padding: 0;
@@ -61,6 +62,7 @@ a:hover{
 h1,h2,h3,h4,h5,h6{
     color: var(--clr-grey-1);
     letter-spacing: 0.10rem;
+    font-family: var(--headingfont);
 }
 h5 {
     text-transform: uppercase;
@@ -74,7 +76,11 @@ ul{
 }
 body{
     background: var(--clr-grey-10);
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.875em;
+}
+.btn{
+    font-weight: bold;
 }
 .profile-header{
     position: relative;
@@ -257,27 +263,8 @@ body{
     text-align: center;
 
 }
-
-.introducing {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0.8rem;
-}
-
-.introducing> :nth-child(odd) {
-    margin-bottom: 14px;
-}
-
-.introducing>section {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
-}
 .info-card > :nth-child(even){
     margin: 1rem 0 !important;
-
 }
 .info-card figure {
     width: 200px;
@@ -334,6 +321,7 @@ body{
     padding: 2rem;
     place-items: center;
     margin: auto;
+    width: 100%;
 }
 #contact-me{
     width: 100%;
@@ -379,6 +367,14 @@ body{
     padding: 0.4rem;
     margin-top: 0.4rem;
 }
+.sites >  li {
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.sites >  li:hover {
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: var(--clr-green-dark) 0px 4px 12px;
+}
 .footer{
     display: flex;
     flex-direction: column;
@@ -419,7 +415,7 @@ body{
         font-size: 16px;
     }
 }
-@media(max-width: 30em), (orientation: landscape){
+@media(max-width: 30em){
     .info-content {
         padding: 2rem 0;
         display: flex;
@@ -433,3 +429,17 @@ body{
         gap: 2rem;
     }
 }
+/* @media(orientation: landscape){
+    .info-content {
+        padding: 2rem 0;
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 1rem;
+    }
+    .call{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+    }
+} */
