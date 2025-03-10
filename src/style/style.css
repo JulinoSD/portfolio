@@ -1,8 +1,6 @@
 :root {
-    --black: #0c0c14;
-    --verde: #313614;
-    --branco-fosco: #ebeee8;
-    --branco-cinza: #e8eeec;
+    --border-radius-large: 0.8rem;
+    --border-radius-min: 0.4rem;
     /* dark shades of primary color*/
     --clr-primary-1: hsl(205, 86%, 17%);
     --clr-primary-2: hsl(205, 77%, 27%);
@@ -73,6 +71,14 @@ h5 {
 }
 ul{
     list-style: none;
+}
+#contact, #about, .me {
+    border-radius: var(--border-radius-large);
+    -webkit-border-radius: var(--border-radius-large);
+    -moz-border-radius: var(--border-radius-large);
+    -ms-border-radius: var(--border-radius-large);
+    -o-border-radius: var(--border-radius-large);    
+    background: var(--clr-white);
 }
 body{
     background: var(--clr-grey-10);
@@ -220,9 +226,6 @@ body{
     display: grid;
     gap: 1rem;
 }
-@sites(min-width: 30em){
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-}
 @media (min-width: 30.5em){
     .sites{
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -276,10 +279,19 @@ body{
     place-items: center;
     place-content: center;
     text-align: center;
+    gap: 1rem;
+    padding: 0.9rem;
 
 }
+@media(min-width: 30em){
+    .info-card{
+    flex-direction: row;
+}
+}
 .info-card > :nth-child(even){
-    margin: 1rem 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .info-card figure {
     width: 200px;
@@ -306,24 +318,10 @@ body{
     text-transform: uppercase;
 }
 .me {
-    display: grid;
-    height: fit-content;
-    border-radius: 0.8rem;
-    -webkit-border-radius: 0.8rem;
-    -moz-border-radius: 0.8rem;
-    -ms-border-radius: 0.8rem;
-    -o-border-radius: 0.8rem;
-    background: var(--clr-white);
     padding: 0.8rem;
 }
 #about{
     padding: 2rem;
-    border-radius: 0.8rem;
-    -webkit-border-radius: 0.8rem;
-    -moz-border-radius: 0.8rem;
-    -ms-border-radius: 0.8rem;
-    -o-border-radius: 0.8rem;
-    background: var(--clr-white);
 }
 #about > :nth-child(1){
     margin: 1rem 0;
@@ -436,17 +434,3 @@ body{
         gap: 2rem;
     }
 }
-/* @media(orientation: landscape){
-    .info-content {
-        padding: 2rem 0;
-        display: flex;
-        flex-direction: column-reverse;
-        row-gap: 1rem;
-    }
-    .call{
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 2rem;
-    }
-} */
