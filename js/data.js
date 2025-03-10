@@ -8,7 +8,7 @@ export const person = [
         {
             university:"Universidade de São Paulo - USP",
             degree:"Engenharia Elétrica", 
-            master:"Antropologia Social"
+            master:"Design Gráfico"
         }, ],
     },
 ]
