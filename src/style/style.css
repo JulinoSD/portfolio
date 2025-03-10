@@ -202,6 +202,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    overflow: hidden;
 }
 .info-content{
     padding: 2rem 0;
@@ -344,7 +345,7 @@ body{
     align-items: center;
     gap: 2rem;
 }
-@media(max-width: 375px){
+@media(max-width: 380px){
     .call{
         display: flex;
         flex-direction: column-reverse;
@@ -409,7 +410,19 @@ body{
         padding: 1rem;
     }
 }
-@media(max-width:375px){
+@media(max-width:380px){
+    .profile-call-btn{
+        gap: 2.5rem;
+    }
+    .profile-call-btn > a {
+        width: 120px;
+    }
+    .profile-description {
+        padding: 0;
+    }
+    .profile-description > h2 {
+        text-align: justify;
+    }
     .info-content{
         display: flex;
         flex-direction: column-reverse;
