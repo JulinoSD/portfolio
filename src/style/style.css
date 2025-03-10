@@ -257,14 +257,6 @@ body{
 
 }
 
-.info-card-teste>figure img {
-    width: 100%;
-}
-
-.info-card-teste p {
-    font: 500 16px Arial, sans-serif;
-}
-
 .introducing {
     display: flex;
     flex-direction: column;
@@ -340,13 +332,15 @@ body{
     background: var(--clr-white);
     padding: 2rem;
     place-items: center;
+    margin: auto;
 }
 #contact-me{
     width: 100%;
 }
 .call{
-    display: flex;
-    flex-direction: row;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
     gap: 2rem;
 }
@@ -370,7 +364,6 @@ body{
 }
 .social-media a {
     padding: 0.3rem 1rem;
-    width: 116px;
     text-align: center;
     color: var(--clr-white);
 }
