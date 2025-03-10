@@ -30,7 +30,7 @@ const init = async () => {
                     <a href="${build_settings.repo_url}" target="blank">
                     ${provide}
                     </a>
-                    <p>propietário: ${owner}</p>
+                    <p>por: ${owner}</p>
                     <a href="${admin_url}" target="blank">
                     ${server ? server : 'Netlify'}
                     </a>
