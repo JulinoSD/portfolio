@@ -33,7 +33,7 @@ const init = async () => {
                     <a href="${build_settings.repo_url}" target="blank">
                     ${provide}
                     </a>
-                    <p>propietário: ${owner}</p>
+                    <p>por: ${owner}</p>
                     <a href="${admin_url}" target="blank">
                     ${server ? server : 'Netlify'}
                     </a>
@@ -52,19 +52,21 @@ me.innerHTML = person.map((item) => {
     const { name, description, image, role, education } = item
     return `
         <article class="info-card">
-            <figure>
-                <img src="${image}" alt = "${name}" />
-            </figure>
-            <h4>${name}</h4>
-            <h5>${role}</h5>
+            <div>
+                <figure>
+                    <img src="${image}" alt = "${name}" />
+                </figure>
+                <h4>${name}</h4>
+                <h5>${role}</h5>
+            </div>
             <section>
             ${education.map(({ university, degree, master }) => `<h5>${university}</h5>
             <ul>
             <li>${degree} & ${master}</li>
             </ul>
             `).join(' ')}
-            </section>
             <p>Descrição: ${description}</p>
+            </section>
         </article>
     `
 }).join(' ')
