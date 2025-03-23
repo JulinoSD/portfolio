@@ -92,52 +92,6 @@ body{
     position: relative;
     width: 100vw;
     height: 33rem;
-    background:
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 50px,
-      rgba(0, 255, 64, 0.25) 50px,
-      rgb(0 255 64 / 25%) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgb(255 127 0 / 25%) 63px,
-      rgb(255 127 0 / 25%) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgb(255 206 0 / 25%) 116px,
-      rgb(255 206 0 / 25%) 166px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 50px,
-      rgb(255 127 0 / 25%) 50px,
-      rgb(255 127 0 / 25%) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgb(255 127 0 / 25%) 63px,
-      rgb(255 127 0 / 25%) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgb(255 206 0 / 25%) 116px,
-      rgb(255 206 0 / 25%) 166px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 5px,
-      rgb(143 77 63 / 25%) 5px,
-      rgb(143 77 63 / 25%) 10px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 5px,
-      rgb(143 77 63 / 25%) 5px,
-      rgb(143 77 63 / 25%) 10px
-    );
-    
     color: var(--clr-white);    
     font-family: 'Lato', sans-serif;
 }
@@ -157,6 +111,15 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 2rem 4rem;
+}
+.profile-menu > .logo {
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    background: var(--clr-green-dark);
+    padding: 0.45rem 0.85rem;
 }
 .profile-menu > ul{
     display: flex;
@@ -231,9 +194,8 @@ body{
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
 }
-.sites li{
+.sites > li{
     height: 8rem;
-    background-color: var(--branco-cinza);
     display: grid;
     grid-template-columns: max-content 1fr;
     place-content: center;
@@ -343,7 +305,7 @@ body{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr auto;
-    align-items: center;
+    align-items: start;
     gap: 2rem;
 }
 .contact-info > div {
@@ -351,6 +313,25 @@ body{
 }
 .contact-info > div p{
     text-transform: capitalize;
+}
+#contact-me > label {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+}
+#contact-me > label + label {
+    margin-top: 0.85rem;
+}
+#contact-me > button {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.4rem;
+    background: var(--clr-green-dark);
+    letter-spacing: 0.25rem;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 .social-media{
     width: 100%;
@@ -369,16 +350,6 @@ body{
 }
 .social-media > :nth-child(3){
     background: rgb(94, 29, 55);
-}
-#contact-me > label {
-    display: flex;
-    flex-direction: column;
-    min-width: 320px;
-}
-#contact-me > button {
-    width: 100%;
-    padding: 0.4rem;
-    margin-top: 0.4rem;
 }
 .footer{
     display: flex;
