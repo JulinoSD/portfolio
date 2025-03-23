@@ -150,7 +150,7 @@ body{
 }
 .profile-call-btn > a{
     width: 150px;
-    border: 2px solid white;
+    border: 2px solid var(--clr-green-dark);
     color: var(--clr-white);
     background: none;
     text-transform: uppercase;
