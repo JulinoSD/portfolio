@@ -55,7 +55,7 @@ a:visited{
     color: red;
 }
 a:hover{
-    color: yellow;
+    color: var(--clr-green-dark);
 }
 h1,h2,h3,h4,h5,h6{
     color: var(--clr-grey-1);
@@ -98,8 +98,8 @@ body{
 .profile-header::before{
     content: "";
     position: absolute;
-    width: 100vw;
     height: 33rem;
+    width: 100vw;
     top: 0;
     z-index: -1;
     background: url('../images/neblina_aurja.jpg') 100% center no-repeat;
@@ -289,75 +289,6 @@ body{
     margin: 1rem 0;
     text-align: center;
 }
-#contact {
-    display: flex;
-    flex-direction: column;
-    background: var(--clr-white);
-    padding: 2rem;
-    place-items: center;
-    margin: auto;
-    width: 100%;
-}
-#contact-me{
-    width: 100%;
-}
-.call{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: start;
-    gap: 2rem;
-}
-.contact-info > div {
-    font-weight: 600;
-}
-.contact-info > div p{
-    text-transform: capitalize;
-}
-#contact-me > label {
-    display: flex;
-    flex-direction: column;
-    min-width: 320px;
-}
-#contact-me > label + label {
-    margin-top: 0.85rem;
-}
-#contact-me > button {
-    width: 100%;
-    padding: 0.4rem;
-    margin-top: 0.4rem;
-    background: var(--clr-green-dark);
-    letter-spacing: 0.25rem;
-    border: none;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.social-media{
-    width: 100%;
-    margin-top: 0.8rem;
-}
-.social-media a {
-    padding: 0.3rem 1rem;
-    text-align: center;
-    color: var(--clr-white);
-}
-.social-media > :nth-child(1){
-    background: #0a66c2;
-}
-.social-media > :nth-child(2){
-    background: #000;
-}
-.social-media > :nth-child(3){
-    background: rgb(94, 29, 55);
-}
-.footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 4rem 0;
-    gap: 2rem;
-}
 @media(max-width:48em){
     .profile-header{
         display: flex;
@@ -403,5 +334,52 @@ body{
         flex-direction: column-reverse;
         align-items: center;
         gap: 2rem;
+    }
+}
+.social-media{
+    width: 100%;
+    margin-top: 0.8rem;
+}
+.social-media a {
+    padding: 0.3rem 1rem;
+    text-align: center;
+    color: var(--clr-white);
+}
+.social-media > :nth-child(1){
+    background: #0a66c2;
+}
+.social-media > :nth-child(2){
+    background: #000;
+}
+.social-media > :nth-child(3){
+    background: rgb(94, 29, 55);
+}
+
+.contact-info{
+    align-self: center;
+}
+.contact-info > div {
+    font-weight: 600;
+    text-align: center;
+    padding: 2rem 0;
+}
+.contact-info > div p{
+    text-transform: capitalize;
+}
+.footer > :nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-top: var(--clr-green-dark) 2px solid;
+    max-width: 1110px;
+    margin: auto;
+}
+@media (max-width: 30rem){
+    .footer> :nth-child(2) {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 0.85rem;
+        font-size: smaller;
+        padding: 0.5rem;
     }
 }
