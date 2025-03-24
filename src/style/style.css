@@ -39,7 +39,7 @@
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     --max-width: 1170px;
     --fixed-width: 620px;
-    --font-btn: 'Lato', sans-serif;
+    --font-btn: 900 1em 'Lato', sans-serif;
     --headingfont: -apple-system, sans-serif;
 }
 *{
@@ -156,17 +156,12 @@ body{
     text-transform: uppercase;
     padding: 0.8rem 0;
     cursor: pointer;
-    font-family: var(--font-btn);
+    font: var(--font-btn);
     text-align: center;
 }
 .profile-call-btn > a:hover{
     border: none;
-}
-.profile-call-btn > :nth-child(1):hover{
-    background: var(--clr-grey-2);
-}
-.profile-call-btn > :nth-child(2):hover{
-    background: #242e1e;
+    background: var(--clr-green-dark);
 }
 .profile-call-btn > :nth-child(2):active{
     background: #808000;
