@@ -57,6 +57,10 @@ a:visited{
 a:hover{
     color: yellow;
 }
+input {
+    width: 100%;
+    max-width: 100%;
+}
 h1,h2,h3,h4,h5,h6{
     color: var(--clr-grey-1);
     letter-spacing: 0.10rem;
@@ -278,7 +282,6 @@ body{
     flex-direction: column;
     place-items: center;
     place-content: center;
-    text-align: center;
     gap: 1rem;
     padding: 0.9rem;
 
@@ -288,11 +291,21 @@ body{
     flex-direction: row;
 }
 }
-.info-card > :nth-child(even){
+.info-card > :nth-child(2){
     display: flex;
     flex-direction: column;
     align-items: center;
+    column-gap: 0.8rem;
 }
+.info-card > :nth-child(1){
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem;
+    text-align: center;
+}
+
 .info-card figure {
     width: 200px;
     height: 200px;
