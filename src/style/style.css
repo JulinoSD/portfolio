@@ -39,7 +39,7 @@
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     --max-width: 1170px;
     --fixed-width: 620px;
-    --font-btn: 'Lato', sans-serif;
+    --font-btn: 900 1em 'Lato', sans-serif;
     --headingfont: -apple-system, sans-serif;
 }
 *{
@@ -55,7 +55,7 @@ a:visited{
     color: red;
 }
 a:hover{
-    color: yellow;
+    color: var(--clr-green-dark);
 }
 input {
     width: 100%;
@@ -96,60 +96,14 @@ body{
     position: relative;
     width: 100vw;
     height: 33rem;
-    background:
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 50px,
-      rgba(0, 255, 64, 0.25) 50px,
-      rgb(0 255 64 / 25%) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgb(255 127 0 / 25%) 63px,
-      rgb(255 127 0 / 25%) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgb(255 206 0 / 25%) 116px,
-      rgb(255 206 0 / 25%) 166px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 50px,
-      rgb(255 127 0 / 25%) 50px,
-      rgb(255 127 0 / 25%) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgb(255 127 0 / 25%) 63px,
-      rgb(255 127 0 / 25%) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgb(255 206 0 / 25%) 116px,
-      rgb(255 206 0 / 25%) 166px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 5px,
-      rgb(143 77 63 / 25%) 5px,
-      rgb(143 77 63 / 25%) 10px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 5px,
-      rgb(143 77 63 / 25%) 5px,
-      rgb(143 77 63 / 25%) 10px
-    );
-    
     color: var(--clr-white);    
     font-family: 'Lato', sans-serif;
 }
 .profile-header::before{
     content: "";
     position: absolute;
-    width: 100vw;
     height: 33rem;
+    width: 100vw;
     top: 0;
     z-index: -1;
     background: url('../images/neblina_aurja.jpg') 100% center no-repeat;
@@ -161,6 +115,15 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 2rem 4rem;
+}
+.profile-menu > .logo {
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    background: var(--clr-green-dark);
+    padding: 0.45rem 0.85rem;
 }
 .profile-menu > ul{
     display: flex;
@@ -191,23 +154,18 @@ body{
 }
 .profile-call-btn > a{
     width: 150px;
-    border: 2px solid white;
+    border: 2px solid var(--clr-green-dark);
     color: var(--clr-white);
     background: none;
     text-transform: uppercase;
     padding: 0.8rem 0;
     cursor: pointer;
-    font-family: var(--font-btn);
+    font: var(--font-btn);
     text-align: center;
 }
 .profile-call-btn > a:hover{
     border: none;
-}
-.profile-call-btn > :nth-child(1):hover{
-    background: var(--clr-grey-2);
-}
-.profile-call-btn > :nth-child(2):hover{
-    background: #242e1e;
+    background: var(--clr-green-dark);
 }
 .profile-call-btn > :nth-child(2):active{
     background: #808000;
@@ -235,9 +193,8 @@ body{
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
 }
-.sites li{
+.sites > li{
     height: 8rem;
-    background-color: var(--branco-cinza);
     display: grid;
     grid-template-columns: max-content 1fr;
     place-content: center;
@@ -340,66 +297,6 @@ body{
     margin: 1rem 0;
     text-align: center;
 }
-#contact {
-    display: flex;
-    flex-direction: column;
-    background: var(--clr-white);
-    padding: 2rem;
-    place-items: center;
-    margin: auto;
-    width: 100%;
-}
-#contact-me{
-    width: 100%;
-}
-.call{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 2rem;
-}
-.contact-info > div {
-    font-weight: 600;
-}
-.contact-info > div p{
-    text-transform: capitalize;
-}
-.social-media{
-    width: 100%;
-    margin-top: 0.8rem;
-}
-.social-media a {
-    padding: 0.3rem 1rem;
-    text-align: center;
-    color: var(--clr-white);
-}
-.social-media > :nth-child(1){
-    background: #0a66c2;
-}
-.social-media > :nth-child(2){
-    background: #000;
-}
-.social-media > :nth-child(3){
-    background: rgb(94, 29, 55);
-}
-#contact-me > label {
-    display: flex;
-    flex-direction: column;
-    min-width: 320px;
-}
-#contact-me > button {
-    width: 100%;
-    padding: 0.4rem;
-    margin-top: 0.4rem;
-}
-.footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 4rem 0;
-    gap: 2rem;
-}
 @media(max-width:48em){
     .profile-header{
         display: flex;
@@ -445,5 +342,52 @@ body{
         flex-direction: column-reverse;
         align-items: center;
         gap: 2rem;
+    }
+}
+.social-media{
+    width: 100%;
+    margin-top: 0.8rem;
+}
+.social-media a {
+    padding: 0.3rem 1rem;
+    text-align: center;
+    color: var(--clr-white);
+}
+.social-media > :nth-child(1){
+    background: #0a66c2;
+}
+.social-media > :nth-child(2){
+    background: #000;
+}
+.social-media > :nth-child(3){
+    background: rgb(94, 29, 55);
+}
+
+.contact-info{
+    align-self: center;
+}
+.contact-info > div {
+    font-weight: 600;
+    text-align: center;
+    padding: 2rem 0;
+}
+.contact-info > div p{
+    text-transform: capitalize;
+}
+.footer > :nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-top: var(--clr-green-dark) 2px solid;
+    max-width: 1110px;
+    margin: auto;
+}
+@media (max-width: 30rem){
+    .footer> :nth-child(2) {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 0.85rem;
+        font-size: smaller;
+        padding: 0.5rem;
     }
 }
